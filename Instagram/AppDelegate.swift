@@ -2,11 +2,14 @@
 //  AppDelegate.swift
 //  Instagram
 //
-//  Created by Swift Programming on 1/4/18.
-//  Copyright © 2018 Osaretin Uyigue. All rights reserved.
+//  Created by Fahad Almehawas on 5/13/17.
+//  Copyright © 2017 Fahad Almehawas. All rights reserved.
+//
 //
 
 import UIKit
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        window = UIWindow()
+        window?.rootViewController = MainTabBarController()
+    
+        UINavigationBar.appearance().isTranslucent = false
+
+
         return true
     }
 
